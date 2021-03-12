@@ -1,7 +1,7 @@
 package jp.techacademy.kenji.takada.aisatsuapp
 
-
 import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
 
 //AlertDialog 用　追加
@@ -50,9 +50,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         TimePickerDialog.OnTimeSetListener { view, hour, minute ->
             Log.d("UI_PARTS", "$hour:$minute")
 
-//            var hour = $hour
-//            var minute = $minute
-
+//            ！！！！！！！！！！！！！！！！！！
+//            その変数を用いて　文字表記を変更する
             if ((2 <= hour && hour <= 9) && (0 <= minute && minute <= 59)) {
                 textView.text = "おはよう"
             } else if ((10 <= hour && hour <= 17) && (0 <= minute && minute <= 59)) {
@@ -65,34 +64,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 textView.text = "設定がおかしいです"
             }
 
-
         },
         13, 0, true
         )
 
         timePickerDialog.show()
     }
+//    showTimePickerDialoND
 
 
-
-
-//    private fun textchamge() {
-//
-////        val hour = toString(hour)
-////        val minute = toString(minute)
-//
-//        if ((2 <= hour && hour <= 9) && (0 <= minute && minute <= 59)) {
-//            textView.text = "おはよう"
-//        } else if ((10 <= hour && hour <= 17) && (0 <= minute && minute <= 59)) {
-//            textView.text = "こんにちわ"
-//        } else if ((18 <= hour && hour <= 24) && (0 <= minute && minute <= 59)) {
-//            textView.text = "こんばんわ"
-//        } else if ((0 <= hour && hour <= 1) && (0 <= minute && minute <= 59)) {
-//            textView.text = "こんばんわ"
-//        } else {
-//            textView.text = "設定がおかしいです"
-//        }
-//    }
 
 }
 //Class END
